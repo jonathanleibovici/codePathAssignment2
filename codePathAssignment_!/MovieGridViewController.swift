@@ -8,7 +8,7 @@
 
 import UIKit
 import AlamofireImage
-class MovieGridViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class MovieGridViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
   
     
     
@@ -70,6 +70,12 @@ class MovieGridViewController: UIViewController,UICollectionViewDataSource,UICol
         
         return cell
       }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width/2.2, height: collectionView.frame.height/3)
+    }
+    
 
     /*
     // MARK: - Navigation

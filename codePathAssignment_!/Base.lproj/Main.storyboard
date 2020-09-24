@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -105,43 +104,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-p4-H5T">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-p4-H5T">
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="usa-6t-iLa">
-                                    <size key="itemSize" width="183" height="200"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="usa-6t-iLa">
+                                    <size key="itemSize" width="185" height="270"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="qm9-Ar-d6N" customClass="MovieGridCell" customModule="codePathAssignment_1" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="168" height="200"/>
+                                        <rect key="frame" x="95" y="0.0" width="185" height="270"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="st1-OI-gGl">
-                                            <rect key="frame" x="0.0" y="0.0" width="168" height="200"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOP-6N-aBP">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOP-6N-aBP">
                                                     <rect key="frame" x="0.0" y="0.0" width="182" height="209"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="200" id="107-OR-ycx"/>
-                                                        <constraint firstAttribute="width" constant="168" id="5DI-7A-uuI"/>
+                                                        <constraint firstAttribute="height" constant="270" id="UGd-4R-ifF"/>
+                                                        <constraint firstAttribute="width" constant="185" id="y8c-B7-brX"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="xOP-6N-aBP" firstAttribute="top" secondItem="st1-OI-gGl" secondAttribute="top" id="5dA-u4-XS1"/>
-                                                <constraint firstItem="xOP-6N-aBP" firstAttribute="top" secondItem="st1-OI-gGl" secondAttribute="top" id="I4P-70-Uhb"/>
-                                                <constraint firstAttribute="bottom" secondItem="xOP-6N-aBP" secondAttribute="bottom" id="WRx-Q1-1Wl"/>
-                                                <constraint firstAttribute="trailing" secondItem="xOP-6N-aBP" secondAttribute="trailing" id="Ypm-pG-tHH"/>
-                                                <constraint firstItem="xOP-6N-aBP" firstAttribute="leading" secondItem="st1-OI-gGl" secondAttribute="leading" id="nVp-7m-Fi4"/>
-                                                <constraint firstAttribute="trailing" secondItem="xOP-6N-aBP" secondAttribute="trailing" id="pwd-oI-HJJ"/>
-                                                <constraint firstItem="xOP-6N-aBP" firstAttribute="leading" secondItem="st1-OI-gGl" secondAttribute="leading" id="xtk-rD-LV1"/>
-                                                <constraint firstAttribute="bottom" secondItem="xOP-6N-aBP" secondAttribute="bottom" id="zcc-S1-oIK"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="168" height="200"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xOP-6N-aBP" secondAttribute="bottom" id="18l-nF-ypZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="xOP-6N-aBP" secondAttribute="trailing" id="PVo-Xg-QzW"/>
+                                            <constraint firstItem="xOP-6N-aBP" firstAttribute="top" secondItem="qm9-Ar-d6N" secondAttribute="top" id="mNs-8C-8Kh"/>
+                                            <constraint firstItem="xOP-6N-aBP" firstAttribute="leading" secondItem="qm9-Ar-d6N" secondAttribute="leading" id="mOX-mL-r9h"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="posterView" destination="xOP-6N-aBP" id="J0P-8z-H4R"/>
                                         </connections>
@@ -151,10 +145,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="t4o-p4-H5T" firstAttribute="top" secondItem="bzQ-aE-iba" secondAttribute="top" id="Byf-Wy-sv8"/>
-                            <constraint firstItem="t4o-p4-H5T" firstAttribute="leading" secondItem="bzQ-aE-iba" secondAttribute="leading" id="C2f-UI-OYy"/>
-                            <constraint firstItem="t4o-p4-H5T" firstAttribute="bottom" secondItem="bzQ-aE-iba" secondAttribute="bottom" id="Yay-R5-AxL"/>
-                            <constraint firstItem="t4o-p4-H5T" firstAttribute="trailing" secondItem="bzQ-aE-iba" secondAttribute="trailing" id="fVq-Qz-goK"/>
+                            <constraint firstItem="t4o-p4-H5T" firstAttribute="trailing" secondItem="bzQ-aE-iba" secondAttribute="trailing" id="52f-5r-frI"/>
+                            <constraint firstItem="t4o-p4-H5T" firstAttribute="leading" secondItem="bzQ-aE-iba" secondAttribute="leading" id="5nk-1A-2Mk"/>
+                            <constraint firstItem="t4o-p4-H5T" firstAttribute="top" secondItem="bzQ-aE-iba" secondAttribute="top" id="aE6-LW-e7h"/>
+                            <constraint firstItem="t4o-p4-H5T" firstAttribute="bottom" secondItem="bzQ-aE-iba" secondAttribute="bottom" id="dGj-Vt-w1V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bzQ-aE-iba"/>
                     </view>
